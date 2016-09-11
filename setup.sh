@@ -1,0 +1,1 @@
+pip install --target=src/lib -r requirements.txt

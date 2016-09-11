@@ -1,1 +1,1 @@
-pip install --target=src/lib -r requirements.txt
+pip install --pre -t lib -r requirements.txt

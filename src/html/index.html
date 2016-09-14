@@ -1,0 +1,24 @@
+<html>
+<script src="https://cdn.auth0.com/js/lock/10.2/lock.min.js"></script>
+<script type="text/javascript">
+  var lock = new Auth0Lock('mZfw4InBCmfhwYd6DGcSc0W49nJxXiIv', 'emlyntest.au.auth0.com', {
+    auth: {
+      redirectUrl: 'https://auth0spike.appspot.com/auth0callback',
+      responseType: 'code',
+      params: {
+        scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+      }
+    }
+  });
+</script>
+<body>
+Hello World. User = {{user.nickname}}
+
+{% if user %}
+<p>logged in.</p>
+<p><a href="/logout">log out</a></p>
+{% else %}
+<button onclick="lock.show();">Login</button>
+{% endif %}
+</body>
+</html>

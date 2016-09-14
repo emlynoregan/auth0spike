@@ -1,1 +1,0 @@
-/opt/google/google_appengine/appcfg.py update . --oauth2
